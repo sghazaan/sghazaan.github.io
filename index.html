@@ -9,16 +9,10 @@
 </head>
 <body>
 
-  <!-- Navbar -->
+ <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-black border-bottom border-secondary px-4">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <!-- Left: Profile Image + Name -->
-      <div class="d-flex align-items-center">
-        <img src="my-profile.jpg" alt="Profile" class="rounded-circle me-2" width="40" height="40">
-        <a class="navbar-brand text-info mb-0 h1" href="#">Shah Rukh Ghazaan</a>
-      </div>
-
-      <!-- Right: Tabs -->
+    <div class="container-fluid d-flex justify-content-end">
+      <!-- Right: Tabs Only -->
       <ul class="nav nav-tabs border-0" id="portfolioTabs" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link text-secondary active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab">About</button>
@@ -29,18 +23,18 @@
         <li class="nav-item" role="presentation">
           <button class="nav-link text-secondary" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">Contact</button>
         </li>
-        <li class="nav-item">
-          <span class="nav-link text-light">🚀 Let's Build Something!</span>
-        </li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero-section text-center py-5">
-    <div class="container">
-      <h1 class="display-5 fw-bold text-white">Hi, I'm Shah Rukh Ghazaan 👋</h1>
-      <p class="lead text-light">Software Engineer | Game Developer | Bubble Developer</p>
+    <div class="container hero-flex">
+      <img src="my-profile.jpg" alt="Profile" class="profile-img" />
+      <div>
+        <h1 class="display-5 fw-bold text-white">Hi, I'm Shah Rukh Ghazaan 👋</h1>
+        <p class="lead text-light">Software Engineer | Game Developer | Bubble Developer</p>
+      </div>
     </div>
   </section>
 
@@ -86,7 +80,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="text-center py-3 bg-black text-muted border-top border-secondary">
+  <footer class="text-center py-3 text-muted border-top border-secondary">
     <small>&copy; 2025 Shah Rukh Ghazaan. All rights reserved.</small>
   </footer>
 
