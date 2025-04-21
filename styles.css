@@ -1,17 +1,30 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
+  background: url('aesthetic-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #000; /* fallback */
 }
 
-a {
-  text-decoration: none;
+.hero-section {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-a:hover {
-  text-decoration: underline;
+.nav-tabs .nav-link {
+  border: none;
+  color: grey;
 }
 
-.profile-img {
-  border: 3px solid #0dcaf0;
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link.active {
+  color: white !important;
+  background-color: transparent;
+  border-bottom: 2px solid #0dcaf0;
+}
+
+.navbar {
+  background-color: #000 !important;
+}
+
+img.rounded-circle {
   object-fit: cover;
 }
