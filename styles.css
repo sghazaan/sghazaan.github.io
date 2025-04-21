@@ -10,3 +10,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.profile-img {
+  border: 3px solid #0dcaf0;
+  object-fit: cover;
+}
