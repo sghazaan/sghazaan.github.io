@@ -78,6 +78,7 @@ footer {
   overflow: hidden; /* Prevent content overflow */
   text-overflow: ellipsis; /* Add ellipsis for overflowing text */
   white-space: nowrap; /* Prevent text wrapping */
+  min-height: 250px; /* Adjust this value as needed */
 }
 
 .card:hover {
