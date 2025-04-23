@@ -61,3 +61,15 @@ footer {
   background-color: rgba(0, 0, 0, 0.85);
   margin-top: auto;
 }
+
+.overflow-auto {
+  overflow-x: auto;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
