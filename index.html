@@ -104,7 +104,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
+<script>
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const scrollContainer = document.querySelector('.overflow-auto');
@@ -115,6 +115,20 @@
 
   nextBtn.addEventListener('click', () => {
     scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    const iframe = card.querySelector('iframe');
+    const originalSrc = iframe.src;
+
+    card.addEventListener('mouseenter', () => {
+      iframe.src = originalSrc + '?autoplay=1'; // Start video on hover
+    });
+
+    card.addEventListener('mouseleave', () => {
+      iframe.src = originalSrc; // Stop video when not hovered
+    });
   });
 </script>
 </body>
