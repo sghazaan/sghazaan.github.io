@@ -114,14 +114,20 @@ footer {
   width: 10px;
   height: 10px;
   border: solid white;
-  border-width: 0 2px 2px 0;
+  border-width: 0 2px 2px 0; /* Right arrow */
   padding: 3px;
+  transition: transform 0.2s; /* Smooth transition for hover */
 }
 
-.btn-secondary#nextBtn:before {
-  transform: rotate(-45deg);
+#prevBtn:before {
+  transform: rotate(135deg); /* Left arrow */
 }
 
-.btn-secondary#prevBtn:before {
-  transform: rotate(135deg);
+#nextBtn:before {
+  transform: rotate(-45deg); /* Right arrow */
+}
+
+/* Optional: Hover effect for buttons */
+.btn-secondary:hover:before {
+  transform: scale(1.2); /* Slightly enlarge the arrow on hover */
 }
