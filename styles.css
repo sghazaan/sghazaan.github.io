@@ -66,6 +66,7 @@ footer {
   overflow-x: auto;
   overflow-y: hidden; /* Hide vertical scrollbar */
   scrollbar-width: none; /* For Firefox */
+  padding: 10px; /* Add padding for better appearance */
 }
 
 .overflow-auto::-webkit-scrollbar {
@@ -73,7 +74,7 @@ footer {
 }
 
 .card {
-  transition: transform 0.2s;
+  transition: transform 0.2s, margin 0.2s; /* Add margin transition */
   overflow: hidden; /* Prevent content overflow */
   text-overflow: ellipsis; /* Add ellipsis for overflowing text */
   white-space: nowrap; /* Prevent text wrapping */
@@ -81,6 +82,7 @@ footer {
 
 .card:hover {
   transform: scale(1.05);
+  margin: 10px; /* Add margin on hover */
 }
 
 .btn-secondary {
