@@ -47,48 +47,47 @@
         <p class="text-light">I love crafting beautiful, responsive websites with clean code and a modern aesthetic. Passionate about developing engaging digital experiences, I specialize in both front-end and back-end development, and enjoy working on creative web apps and games.</p>
       </div>
 
-      <!-- Projects Tab -->
-      <div class="tab-pane fade" id="projects" role="tabpanel">
-        <h2 class="text-white">Projects</h2>
-        <div class="row g-4 mt-3">
-          <div class="col-md-6">
-            <div class="card bg-dark border-secondary h-100">
-              <div class="card-body">
-                <h5 class="card-title">Social App Development</h5>
-                <p class="card-text">Developed a social app with real-time chat and multiplayer functionality using StreamChat and Photon Fusion.</p>
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Social App Video" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
+
+     <!-- Projects Tab -->
+<div class="tab-pane fade" id="projects" role="tabpanel">
+  <h2 class="text-white">Projects</h2>
+  <div class="d-flex align-items-center mt-3">
+    <button class="btn btn-secondary me-2" id="prevBtn">&#10094;</button>
+    <div class="overflow-auto" style="white-space: nowrap; flex: 1;">
+      <div class="d-inline-block">
+        <div class="card bg-dark border-secondary" style="display: inline-block; width: 300px; margin-right: 20px;">
+          <div class="card-body">
+            <h5 class="card-title">Social App Development</h5>
+            <p class="card-text">Developed a social app with real-time chat and multiplayer functionality using StreamChat and Photon Fusion.</p>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Social App Video" frameborder="0" allowfullscreen></iframe>
           </div>
-          <div class="col-md-6">
-            <div class="card bg-dark border-secondary h-100">
-              <div class="card-body">
-                <h5 class="card-title">Rescue Sheep Game</h5>
-                <p class="card-text">Designed core gameplay mechanics including collisions and animations in Unity 3D.</p>
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Rescue Sheep Video" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
+        </div>
+        <div class="card bg-dark border-secondary" style="display: inline-block; width: 300px; margin-right: 20px;">
+          <div class="card-body">
+            <h5 class="card-title">Rescue Sheep Game</h5>
+            <p class="card-text">Designed core gameplay mechanics including collisions and animations in Unity 3D.</p>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Rescue Sheep Video" frameborder="0" allowfullscreen></iframe>
           </div>
-          <div class="col-md-6">
-            <div class="card bg-dark border-secondary h-100">
-              <div class="card-body">
-                <h5 class="card-title">Endless Runner Game</h5>
-                <p class="card-text">Created a clone of Subway Surfer with endless running and coin collection mechanics in Unity 3D.</p>
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Endless Runner Video" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
+        </div>
+        <div class="card bg-dark border-secondary" style="display: inline-block; width: 300px; margin-right: 20px;">
+          <div class="card-body">
+            <h5 class="card-title">Endless Runner Game</h5>
+            <p class="card-text">Created a clone of Subway Surfer with endless running and coin collection mechanics in Unity 3D.</p>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Endless Runner Video" frameborder="0" allowfullscreen></iframe>
           </div>
-          <div class="col-md-6">
-            <div class="card bg-dark border-secondary h-100">
-              <div class="card-body">
-                <h5 class="card-title">VR Dental Training Simulation</h5>
-                <p class="card-text">Developed an Oculus VR application for simulating dental procedures, integrating feedback mechanisms and multiplayer features.</p>
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="VR Dental Training Video" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
+        </div>
+        <div class="card bg-dark border-secondary" style="display: inline-block; width: 300px; margin-right: 20px;">
+          <div class="card-body">
+            <h5 class="card-title">VR Dental Training Simulation</h5>
+            <p class="card-text">Developed an Oculus VR application for simulating dental procedures, integrating feedback mechanisms and multiplayer features.</p>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="VR Dental Training Video" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
+    </div>
+    <button class="btn btn-secondary ms-2" id="nextBtn">&#10095;</button>
+  </div>
+</div>
 
       <!-- Contact Tab -->
       <div class="tab-pane fade" id="contact" role="tabpanel">
@@ -105,5 +104,18 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const scrollContainer = document.querySelector('.overflow-auto');
+
+  prevBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>
