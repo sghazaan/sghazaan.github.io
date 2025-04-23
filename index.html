@@ -109,27 +109,27 @@
   const nextBtn = document.getElementById('nextBtn');
   const scrollContainer = document.querySelector('.overflow-auto');
 
+  function updateArrowVisibility() {
+    const scrollLeft = scrollContainer.scrollLeft;
+    const scrollWidth = scrollContainer.scrollWidth;
+    const clientWidth = scrollContainer.clientWidth;
+
+    prevBtn.style.display = scrollLeft > 0 ? 'block' : 'none';
+    nextBtn.style.display = scrollLeft < scrollWidth - clientWidth ? 'block' : 'none';
+  }
+
   prevBtn.addEventListener('click', () => {
     scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+    updateArrowVisibility();
   });
 
   nextBtn.addEventListener('click', () => {
     scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+    updateArrowVisibility();
   });
 
-  const cards = document.querySelectorAll('.card');
-  cards.forEach(card => {
-    const iframe = card.querySelector('iframe');
-    const originalSrc = iframe.src;
-
-    card.addEventListener('mouseenter', () => {
-      iframe.src = originalSrc + '?autoplay=1'; // Start video on hover
-    });
-
-    card.addEventListener('mouseleave', () => {
-      iframe.src = originalSrc; // Stop video when not hovered
-    });
-  });
+  scrollContainer.addEventListener('scroll', updateArrowVisibility);
+  updateArrowVisibility(); // Initial check
 </script>
 </body>
 </html>
