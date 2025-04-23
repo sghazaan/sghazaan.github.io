@@ -110,24 +110,29 @@ footer {
 
 .btn-secondary:before {
   content: '';
-  position: relative;
-  width: 10px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0; /* Right arrow */
-  padding: 3px;
-  transition: transform 0.2s; /* Smooth transition for hover */
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-style: solid;
 }
 
 #prevBtn:before {
-  transform: rotate(135deg); /* Left arrow */
+  border-width: 10px 10px 10px 0; /* Left arrow */
+  border-color: transparent rgba(255, 255, 255, 1) transparent transparent;
+  left: 10px; /* Position arrow */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #nextBtn:before {
-  transform: rotate(-45deg); /* Right arrow */
+  border-width: 10px 0 10px 10px; /* Right arrow */
+  border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+  right: 10px; /* Position arrow */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Optional: Hover effect for buttons */
 .btn-secondary:hover:before {
-  transform: scale(1.2); /* Slightly enlarge the arrow on hover */
+  opacity: 0.8; /* Slightly fade on hover for effect */
 }
