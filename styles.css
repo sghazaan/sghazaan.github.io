@@ -82,3 +82,35 @@ footer {
 .card:hover {
   transform: scale(1.05);
 }
+
+.btn-secondary {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: none; /* Initially hide */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  transform: rotate(135deg);
+}
+
+.btn-secondary#nextBtn:before {
+  transform: rotate(-45deg);
+}
