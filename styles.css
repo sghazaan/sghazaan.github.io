@@ -84,20 +84,28 @@ footer {
 }
 
 .btn-secondary {
+  display: none; /* Hide buttons by default */
   background-color: rgba(0, 0, 0, 0.8);
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: none; /* Initially hide */
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: absolute; /* Allow positioning */
   z-index: 1;
 }
 
-.btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+#prevBtn {
+  left: 10px; /* Position on the left */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#nextBtn {
+  right: 10px; /* Position on the right */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .btn-secondary:before {
@@ -108,9 +116,12 @@ footer {
   border: solid white;
   border-width: 0 2px 2px 0;
   padding: 3px;
-  transform: rotate(135deg);
 }
 
 .btn-secondary#nextBtn:before {
   transform: rotate(-45deg);
+}
+
+.btn-secondary#prevBtn:before {
+  transform: rotate(135deg);
 }
