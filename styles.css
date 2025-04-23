@@ -92,7 +92,7 @@ footer {
   height: 40px;
   align-items: center;
   justify-content: center;
-  position: absolute; /* Allow positioning */
+  position: relative; /* Allow positioning */
   z-index: 1;
 }
 
@@ -110,7 +110,7 @@ footer {
 
 .btn-secondary:before {
   content: '';
-  position: absolute;
+  position: relative;
   width: 10px;
   height: 10px;
   border: solid white;
