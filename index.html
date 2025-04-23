@@ -121,8 +121,8 @@
     const scrollWidth = scrollContainer.scrollWidth;
     const clientWidth = scrollContainer.clientWidth;
 
-    prevBtn.style.display = scrollLeft > 0 ? 'block' : 'none';
-    nextBtn.style.display = scrollLeft < scrollWidth - clientWidth ? 'block' : 'none';
+    prevBtn.style.display = scrollLeft > 0 ? 'flex' : 'none'; // Use flex for centering
+    nextBtn.style.display = scrollLeft < scrollWidth - clientWidth ? 'flex' : 'none';
   }
 
   prevBtn.addEventListener('click', () => {
