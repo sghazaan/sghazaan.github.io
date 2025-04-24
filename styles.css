@@ -98,7 +98,7 @@ footer {
   justify-content: center;
   position: absolute; /* Positioning to float over the content */
   z-index: 2; /* Bring them to the front */
-  top: 50%; /* Center vertically */
+  top: 70%; /* Center vertically */
   transform: translateY(-50%); /* Adjust for perfect centering */
 }
 
@@ -125,7 +125,7 @@ footer {
   border-width: 10px 10px 10px 0; /* Left arrow */
   border-color: transparent rgba(255, 255, 255, 1) transparent transparent;
   left: 10px; /* Position arrow */
-  top: 70%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -133,7 +133,7 @@ footer {
   border-width: 10px 0 10px 10px; /* Right arrow */
   border-color: transparent transparent transparent rgba(255, 255, 255, 1);
   right: 10px; /* Position arrow */
-  top: 70%;
+  top: 50%;
   transform: translateY(-50%);
 }
 /* Optional: Hover effect for buttons */
