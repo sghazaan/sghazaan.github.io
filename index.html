@@ -55,7 +55,7 @@
 <button class="btn btn-secondary me-2" id="prevBtn"></button>
     <div class="overflow-auto" style="white-space: nowrap; flex: 1;">
       <div class="d-inline-block">
-        <div class="card bg-dark border-secondary" style="display: inline-block; width: 300px; margin-right: 20px;">
+        <div class="card bg-dark border-secondary" style="display: inline-block; width: 300px; margin-right: 20px;"data-tech="React, Node.js" data-repo="https://github.com/sghazaan/FYP-TeleDent-v6.git">
           <div class="card-body">
             <h5 class="card-title">Social App Development</h5>
             <p class="card-text">Developed a social app with real-time chat and multiplayer functionality using StreamChat and Photon Fusion.</p>
@@ -90,6 +90,13 @@
             <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="VR Dental Training Video" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
+         <div class="card bg-dark border-secondary" style="display: inline-block; width: 300px; margin-right: 20px;">
+          <div class="card-body">
+            <h5 class="card-title">VR Dental Training Simulation</h5>
+            <p class="card-text">Developed an Oculus VR application for simulating dental procedures, integrating feedback mechanisms and multiplayer features.</p>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="VR Dental Training Video" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
     <button class="btn btn-secondary ms-2" id="nextBtn"></button>
@@ -109,6 +116,21 @@
   <footer class="text-center py-3 text-muted border-top border-secondary">
     <small>&copy; 2025 Shah Rukh Ghazaan. All rights reserved.</small>
   </footer>
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="projectDescription"></p>
+        <p><strong>Tech Stack:</strong> <span id="projectTechStack"></span></p>
+        <p><strong>Repository:</strong> <a id="projectRepo" href="" target="_blank" class="text-white">View Repository</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -137,6 +159,29 @@
 
   scrollContainer.addEventListener('scroll', updateArrowVisibility);
   updateArrowVisibility(); // Initial check
+
+  const cards = document.querySelectorAll('.card');
+  const projectModal = new bootstrap.Modal(document.getElementById('projectModal'));
+  const projectModalLabel = document.getElementById('projectModalLabel');
+  const projectDescription = document.getElementById('projectDescription');
+  const projectTechStack = document.getElementById('projectTechStack');
+  const projectRepo = document.getElementById('projectRepo');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const title = card.querySelector('.card-title').innerText;
+      const description = card.querySelector('.card-text').innerText;
+      const techStack = card.getAttribute('data-tech');
+      const repoLink = card.getAttribute('data-repo');
+
+      projectModalLabel.innerText = title;
+      projectDescription.innerText = description;
+      projectTechStack.innerText = techStack;
+      projectRepo.href = repoLink;
+
+      projectModal.show();
+    });
+  });
 </script>
 </body>
 </html>
