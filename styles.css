@@ -87,7 +87,7 @@ footer {
 }
 
 .btn-secondary {
-  display: none; /* Hide buttons by default */
+
   background-color: rgba(0, 0, 0, 0.8);
   border: none;
   border-radius: 50%;
@@ -100,6 +100,8 @@ footer {
 }
 
 #prevBtn {
+  
+  display: none; /* Hide buttons by default */
   left: 10px; /* Position on the left */
   top: 50%;
   transform: translateY(-50%);
