@@ -108,6 +108,7 @@ footer {
 }
 
 #nextBtn {
+  display:block;
   right: 10px; /* Position on the right */
   top: 50%;
   transform: translateY(-50%);
