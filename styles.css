@@ -76,33 +76,14 @@ footer {
 .card {
   transition: transform 0.2s, margin 0.2s; /* Add margin transition */
   overflow: hidden; /* Prevent content overflow */
-  min-height: 250px; /* Minimum height for the card */
-}
-
-.card-body {
-  transition: max-height 0.3s ease; /* Smooth transition for height */
-  overflow: hidden; /* Hide overflow for non-hover state */
-  max-height: 100px; /* Start with hidden content */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: nowrap; /* Prevent text wrapping */
+  min-height: 250px; /* Adjust this value as needed */
 }
 
 .card:hover {
   transform: scale(1.05);
   margin: 10px; /* Add margin on hover */
-}
-
-.card:hover .card-body {
-  max-height: 300px; /* Adjust to fit your content */
-  overflow: visible; /* Allow overflow on hover */
-}
-
-.card iframe {
-  width: 100%; /* Ensure iframe takes full width */
-  height: 200px; /* Default height */
-  transition: height 0.3s ease; /* Smooth height transition */
-}
-
-.card:hover iframe {
-  height: 300px; /* Increase height on hover */
 }
 
 .btn-secondary {
