@@ -108,6 +108,7 @@ footer {
 }
 
 #nextBtn {
+  display: flex !important;
   right: 10px; /* Position on the right */
   display: none; /* Initially hidden */
 }
