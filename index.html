@@ -135,31 +135,31 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const scrollContainer = document.querySelector('.overflow-auto');
+ const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const scrollContainer = document.querySelector('.overflow-auto');
 
-  function updateArrowVisibility() {
-    const scrollLeft = scrollContainer.scrollLeft;
-    const scrollWidth = scrollContainer.scrollWidth;
-    const clientWidth = scrollContainer.clientWidth;
+function updateArrowVisibility() {
+  const scrollLeft = scrollContainer.scrollLeft;
+  const scrollWidth = scrollContainer.scrollWidth;
+  const clientWidth = scrollContainer.clientWidth;
 
-    prevBtn.style.display = scrollLeft > 0 ? 'flex' : 'none'; // Use flex for centering
-    nextBtn.style.display = scrollLeft < scrollWidth - clientWidth ? 'flex' : 'none';
-  }
+  prevBtn.style.display = scrollLeft > 0 ? 'flex' : 'none'; // Show if scrolled
+  nextBtn.style.display = scrollLeft < scrollWidth - clientWidth ? 'flex' : 'none'; // Show if not at end
+}
 
-  prevBtn.addEventListener('click', () => {
-    scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
-    updateArrowVisibility();
-  });
+prevBtn.addEventListener('click', () => {
+  scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+  updateArrowVisibility();
+});
 
-  nextBtn.addEventListener('click', () => {
-    scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
-    updateArrowVisibility();
-  });
+nextBtn.addEventListener('click', () => {
+  scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+  updateArrowVisibility();
+});
 
-  scrollContainer.addEventListener('scroll', updateArrowVisibility);
-  updateArrowVisibility(); // Initial check
+scrollContainer.addEventListener('scroll', updateArrowVisibility);
+updateArrowVisibility(); // Initial visibility check
 
   const cards = document.querySelectorAll('.card');
   const projectModal = new bootstrap.Modal(document.getElementById('projectModal'));
