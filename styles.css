@@ -103,13 +103,13 @@ footer {
 }
 
 #prevBtn {
-  left: 10px; /* Position on the left */
+  left: 20px; /* Position on the left */
   display: none; /* Initially hidden */
 }
 
 #nextBtn {
   display: flex !important;
-  right: 10px; /* Position on the right */
+  right: 20px; /* Position on the right */
   display: none; /* Initially hidden */
 }
 
@@ -125,7 +125,7 @@ footer {
   border-width: 10px 10px 10px 0; /* Left arrow */
   border-color: transparent rgba(255, 255, 255, 1) transparent transparent;
   left: 10px; /* Position arrow */
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
 }
 
@@ -133,7 +133,7 @@ footer {
   border-width: 10px 0 10px 10px; /* Right arrow */
   border-color: transparent transparent transparent rgba(255, 255, 255, 1);
   right: 10px; /* Position arrow */
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
 }
 /* Optional: Hover effect for buttons */
