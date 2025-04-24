@@ -55,7 +55,7 @@
 <button class="btn btn-secondary me-2" id="prevBtn"></button>
     <div class="overflow-auto" style="white-space: nowrap; flex: 1;">
       <div class="d-inline-block">
-        <div class="card bg-dark border-secondary" style="display: inline-block; width: 300px; margin-right: 20px;"data-tech="React, Node.js" data-repo="https://github.com/sghazaan/FYP-TeleDent-v6.git">
+        <div class="card bg-dark border-secondary" style="display: inline-block; width: 300px; margin-right: 20px;"data-tech="React, Node.js" data-repo="https://github.com/sghazaan/FYP-TeleDent-v6.git" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
           <div class="card-body">
             <h5 class="card-title">Social App Development</h5>
             <p class="card-text">Developed a social app with real-time chat and multiplayer functionality using StreamChat and Photon Fusion.</p>
@@ -124,6 +124,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <iframe id="projectVideo" width="100%" height="300" src="" frameborder="0" allowfullscreen></iframe>
         <p id="projectDescription"></p>
         <p><strong>Tech Stack:</strong> <span id="projectTechStack"></span></p>
         <p><strong>Repository:</strong> <a id="projectRepo" href="" target="_blank" class="text-white">View Repository</a></p>
@@ -166,6 +167,7 @@
   const projectDescription = document.getElementById('projectDescription');
   const projectTechStack = document.getElementById('projectTechStack');
   const projectRepo = document.getElementById('projectRepo');
+  const projectVideo = document.getElementById('projectVideo');
 
   cards.forEach(card => {
     card.addEventListener('click', () => {
@@ -173,12 +175,12 @@
       const description = card.querySelector('.card-text').innerText;
       const techStack = card.getAttribute('data-tech');
       const repoLink = card.getAttribute('data-repo');
-
+      const videoSrc = card.getAttribute('data-video');
       projectModalLabel.innerText = title;
       projectDescription.innerText = description;
       projectTechStack.innerText = techStack;
       projectRepo.href = repoLink;
-
+      projectVideo.src = videoSrc; // Set the video source
       projectModal.show();
     });
   });
