@@ -86,33 +86,7 @@ footer {
   margin: 10px; /* Add margin on hover */
 }
 
-.btn-secondary {
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  align-items: center;
-  justify-content: center;
-  position: relative; /* Allow positioning */
-  z-index: 1;
-}
 
-#prevBtn {
-  
-  
-  left: 10px; /* Position on the left */
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#nextBtn {
-  
-  right: 10px; /* Position on the right */
-  top: 50%;
-  transform: translateY(-50%);
-}
 .btn-secondary {
   display: flex; /* Ensure buttons are visible */
   background-color: rgba(0, 0, 0, 0.8);
